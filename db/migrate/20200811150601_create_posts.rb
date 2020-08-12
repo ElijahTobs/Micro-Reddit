@@ -4,8 +4,6 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.string :title
       t.text :body
       t.references :user, foreign_key: true
-
-      # remove_column :user_id_id
       t.timestamps
     end
   end
