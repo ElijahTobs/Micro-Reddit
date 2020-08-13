@@ -3,6 +3,6 @@ class Post < ApplicationRecord
   has_many :comments
 
   validates :user_id, presence: true
-  validates :body, presence: true
+  validates :body, length: { in: 15..100 }
   validates :title, length: { in: 10..30 }
 end
